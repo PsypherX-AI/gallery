@@ -1,0 +1,1024 @@
+.gutters {
+    position: relative;
+    left: 10%;
+    width: 80%;
+    overflow-x: hidden;
+}
+
+/* -------------- NAVIGATION AND LOGO -------------- */
+
+.logo {
+    width: auto;
+    height: 80px;
+    cursor: pointer;
+    padding: 10px 0;
+}
+
+body {
+    /* background-image: linear-gradient(to right, purple, #007ec2); */
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+header li,
+header a,
+header button {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    position: relative;
+    z-index: 10;
+}
+
+header:hover {
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+header ul {
+    display: flex;
+}
+
+.nav-items {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.nav-items li {
+    float: right;
+    margin: 0 10%;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.nav-items .icon {
+    display: none;
+}
+
+/* STYLING FOR CENTER NAVIGATION ITEMS */
+
+.nav-items li a {
+    transition: all 0.3s ease 0;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    display: inline-block;
+    padding: 15px 20px;
+    position: relative;
+}
+
+.nav-items li a:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #00ffa6;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+.nav-items li a:hover:after {
+    width: 100%;
+    left: 0;
+}
+
+.nav-items li a:hover {
+    color: #00ffa6;
+}
+
+/* removes the cursor from next to page elements */
+.x-navbar .desktop .x-nav>li>a:not(.x-btn-navbar-woocommerce) {
+    cursor: none !important;
+}
+
+/* -------------- NAVIGATION AND LOGO END -------------- */
+
+
+/* -------------- MAIN START - EVERYTHING UNDER NAVIGATION ------------- */
+
+/* Main background */
+.main-bkg {
+    object-fit: cover;
+    height: 100%;
+    position: fixed;
+    z-index: -10;
+    width: 100%;
+    opacity: 0.35;
+    background-image: linear-gradient(to right, purple, #007ec2);
+}
+
+/* Scroll to top button */
+@media only screen and (max-width: 1023px) {
+    #scrolltotop_parent {
+      bottom: 40px !important;
+      right: 25px !important;
+    }
+}
+  
+  #scrolltotop_parent {
+    background: rgb(57, 62, 70);
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 60px;
+    right: 60px;
+    z-index: 1004 !important;
+    opacity: 0;
+    border-radius: 50%;
+  }
+  
+  #scrolltotop_arrow {
+    width: 0px;
+    height: 0px;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid #00ffa6;
+    margin: 0 auto;
+    margin-top: 19px;
+  }
+
+/* Pages */
+.pages {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 3px 3px 3px black;
+}
+
+.page-container {
+    margin-bottom: 60px;
+    border-style: inset;
+    border-radius: 30px;
+    border-color: #00ffa6;
+    border-width: 5px;
+}
+
+/* Page Headings */
+.page-headings {
+    color: #00ffa6;
+    text-align: center;
+    padding: 40px;
+    font-size: 40px;
+    position: relative;
+}
+
+/* --- GALLERY --- */
+.page-gallery {
+    background-color: rgba(57, 62, 70, 0.5);
+    overflow: hidden;
+}
+
+.gallery-h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 13px;
+    text-shadow: 4px 4px 3px black;
+}
+
+.gallery-heading {
+    display: flex;
+    justify-content: center;
+    color: #00FFA3;
+    font-size: 25px;
+    text-shadow: 4px 4px 3px black;
+    margin-top: 30px;
+}
+
+.category-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    color: white;
+    font-size: 15px;
+    text-shadow: 4px 4px 3px black;}
+
+.gallery-row {
+    width: 100%;
+    height: 100%;
+    margin-top: 15px;
+}
+
+.gallery-row img {
+    width: 24.6%;
+    margin: 0.2%;
+    border: solid white 1px;
+    border-radius: 5px;
+    object-fit: contain;
+}
+
+.gallery-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.category-button {
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: 20px;
+    padding: 8px 20px;
+    margin: 0 10px;
+    color: white;
+    border: solid 3px transparent;
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, #00FFA3, #DC1FFF);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+.exclusive {
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, gold, #DD2476);
+}
+
+.selected {
+    box-shadow: none;
+    color: black;
+    text-decoration: underline;
+}
+
+.unselected {
+    box-shadow: 2px 1000px 1px black inset;
+    text-decoration: none;
+}
+
+.unselected:hover {
+    box-shadow: none;
+    color: black;
+}
+
+/* Horizontal Line under Gallery Buttons */
+.gallery-hr {
+    margin: 25px 10%; 
+    width: 80%; 
+    height: 5px;
+    background-color: #00FFA3;
+}
+
+/** ---- IMAGE MODAL ---- **/
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 80px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+  
+  /* Modal Content (image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: auto;
+    max-width: 1100px;
+    border: inset #00ffa6;
+    max-height: 90%;
+  }
+  
+  /* Caption of Modal Image */
+  #caption {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #00ffa6;
+    padding: 10px 0;
+    height: 150px;
+  }
+  
+  /* Add Animation */
+  .modal-content, #caption {  
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @keyframes zoom {
+    from {transform: scale(0.1)} 
+    to {transform: scale(1)}
+  }
+  
+  /* The Close Button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 50px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* 100% Image Width on Smaller Screens */
+  @media only screen and (max-width: 1100px){
+    .modal-content {
+      max-width: 95%;
+      height: auto;
+    }
+  }
+
+/* --- ABOUT ME PAGE --- */
+.page-about-me {
+    min-height: 900px;
+    max-height: 100%;
+    color: white;
+    text-align: center;
+    padding-top: 0px;
+}
+
+.page-about-me h1 {
+    font-size: 150px;
+    padding: 120px 0 30px 0;
+    width: 100%;
+    text-shadow: 4px 4px 3px black;
+    font-family: 'Bilbo Swash Caps';
+}
+
+.page-about-me p {
+    font-size: 34px;
+    padding: 50px 0;
+    width: 100%;
+}
+
+/* Remove hyperlink underline */
+.page-about-me a {
+    text-decoration: none;
+}
+
+/* Span colour */
+.pages span {
+    color: #00ffa6;
+    font-weight: bold;
+}
+
+/* --- SKILLS PAGE --- */
+.page-skills {
+    margin-top: 30px;
+    min-height: 900px;
+    max-height: 100%;
+    background-color: rgba(57, 62, 70, 0.8);
+}
+
+.skills-section {
+    position: relative;
+    width: 90%;
+    left: 5%;
+    padding-bottom: 80px;
+    display: flex; 
+    justify-content: left; 
+    text-align: center;
+}
+
+.edited-images-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.edited-images-container img {
+    width: 35%;
+    border: solid #00FFA3 1px;
+    border-radius: 5px;
+}
+
+.edited-images-container span {
+    font-size: 50px;
+    padding: 0 30px;
+    font-weight: normal;
+}
+
+.products {
+    border-style: inset;
+    border-radius: 50px;
+    border-color: #00ff88;
+    border-width: 4px;
+    position: relative;
+    width: 100%;
+    padding: 60px 30px;
+    text-align: left;
+}
+
+.skills-hr {
+    display: flex; 
+    justify-content: left;
+    margin-left: 5%;
+    width: 90%;
+    height: 6px; 
+    background-color: #00ff88; 
+    margin-top: -20px; 
+    margin-bottom: 60px;
+}
+
+.skills-section ul {
+    list-style: none;
+    color: white;
+    font-size: 25px;
+    list-style-position: inside;
+}
+
+.skills-section li {
+    padding: 30px 0;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.skills-section p {
+    font-size: 16px;
+}
+
+.skills-section h3 {
+    color: white;
+    top: 20px;
+    font-size: 30px;
+}
+
+.products h3 {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+    color: #00FFA3;
+    text-align: center;
+}
+
+.products h4 {
+    text-align: center;
+    /* padding-bottom: 20px; */
+    /* padding-top: 40px; */
+    padding: 40px 0 20px 0;
+    font-size: 20px;
+}
+
+.products li {
+    font-size: 20px;
+    padding: 10px 0;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.products p {
+    text-align: center;
+    color: white;
+    /* margin-bottom: 40px; */
+    font-style: italic;
+}
+
+.poster-prices,
+.general-prices {
+    display: flex;
+    margin-bottom: 40px;
+    text-align: center;
+    justify-content: center;
+}
+
+.products table {
+    border: 2px solid #00FFA3;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.vl {
+    border-left: 6px solid #00FFA3;
+    height: 220px;
+    margin: 0 25px;
+    box-shadow: 4px 4px 3px black;
+}
+
+.poster-prices ul {
+    width: 33%;
+}
+
+.general-prices ul {
+    width: 30%;   
+}
+
+.price-table {
+    width: 80%;
+    margin-left: 10%;
+    font-size: 22px;
+    color: white;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.price-table td {
+    /* width: 0%; */
+    height: 40px;
+}
+
+.price-table tr:nth-child(odd){
+    background-color: rgba(175, 175, 175, 0.25);
+}
+
+.price-table span {
+    font-size: 16px;
+}
+
+.price-table h1 {
+    font-size: 20px;
+}
+
+.discount {
+    font-size: 16px;
+    text-shadow: none;
+}
+
+.poster-prices li {
+    list-style-type: none;
+}
+
+.poster-prices h3,
+.general-prices h3 {
+    display: flex;
+    padding-bottom: 0px;
+    color: white;
+    font-size: 22px;
+    text-decoration: underline;
+}
+
+.other-prices ul {
+    display: flex;
+    justify-content: center;
+}
+
+.other-prices li {
+    text-align: center;
+    float: left;
+    /* width: 20%; */
+    padding: 0px 2%;
+    margin-left: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vl-others {
+    border-left: 3px solid #00FFA3;
+    height: 40px;
+    box-shadow: 4px 4px 3px black;;
+}
+
+/* --- WORK WITH ME PAGE --- */
+.page-work-with-me {
+    height: 100%;
+    background-color: rgba(57, 62, 70, 0.8);
+    
+}
+
+.wwm-section {
+    display: flex; 
+    justify-content: center;
+    padding-bottom: 50px;
+    align-items: center;
+}
+
+.wwm-section h1 {
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+
+.wwm-details {
+    width: 90%;
+    margin-left: 5%;
+    color: white;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.wwm-left {
+    width: 95%;
+    height: 100%;
+    padding: 50px 0;
+    border-style: inset;
+    border-color: #00ff88;
+    border-radius: 50px;
+    text-align: left;
+}
+
+.wwm-left a {
+    color: white;
+}
+
+.contact-details {
+    color: #00ffa6 !important;
+    margin-left: 37% !important;
+    display: inline;
+}
+
+.wwm-left label {
+    margin-left: 20px;
+    color: white;
+    font-size: 20px;
+}
+
+/* -------------- MAIN END ------------- */
+
+/* -------------- FOOTER START ------------- */
+
+footer {
+    background-color: rgba(57, 62, 70, 0.8);
+    color: white;
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    /* justify content -> centered the items horizontally */
+    justify-content: center;
+    /* Align items -> put p elements in the middle (vertically) of the footer section */
+    align-items: center;
+}
+
+footer p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+footer a {
+    color: #00ffa6;
+}
+
+/* -------------- FOOTER END ------------- */
+
+/* -------------- RESPONSIVENESS START ------------- */
+/** Tablets **/
+@media only screen and (max-width: 1100px) {
+    .page-about-me {
+        margin-bottom: 50px;
+    }
+
+    .page-about-me h1 {
+        font-size: 120px;
+    }
+
+    .page-about-me p {
+        font-size: 24px;
+        padding: 30px 0;
+    }
+
+    .gallery-buttons {
+        display: block;
+    }
+
+    .category-button {
+        width: 40%;
+        margin: 10px 0 0 6.5%;
+    }
+
+    .exclusive {
+        width: 87.5%;
+    }
+
+    .skills-left {
+        width: 50%;
+        left: 0%;
+        padding: 60px 20px;
+    }
+
+    .skills-right {
+        width: 50%;
+        left: 0%;
+        padding: 60px 20px;
+    }
+
+    .skills-left li,
+    .skills-right li {
+        font-size: 16px;
+    }
+
+    .skills-right ul {
+        margin-left: 30%;
+    }
+
+    .skills-left ul {
+        margin-left: 7%;
+    }
+
+    .products li {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .products p {
+        font-size: 14px;
+    }
+
+    .poster-prices {
+        margin-left: 0;
+    }
+
+    .table-left-column {
+        width: 40%;
+    }
+
+    .price-table {
+        width: 100%;
+        margin-left: 0;
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .price-table span {
+        font-size: 13px;
+    }
+
+    .other-prices li {
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .vl {
+        border-left: 3px solid #00FFA3;
+        height: 250px;
+        margin-left: 20px;
+        margin-right: 20px;
+        box-shadow: 4px 4px 3px black;; 
+    }
+
+    .vl-others {
+        border-left: 3px solid #00FFA3;
+        height: 50px;
+        /* margin-right: 50px; */
+        box-shadow: 4px 4px 3px black;;
+    }
+
+    .discount {
+        font-size: 14px;
+        text-shadow: none;
+    }
+
+    .poster-prices h3 {
+        font-size: 20px;
+        padding-bottom: 20px;
+    }
+
+    .products h4 {
+        font-size: 18px;
+    }
+
+    .contact-details {
+        margin-left: 25% !important;
+    }
+}
+
+/* Mobile Phones */
+@media only screen and (max-width: 600px) {
+    .gutters {
+        left: 0;
+        width: 100%;
+    }
+
+    .logo {
+        height: 60px;
+    }
+
+    header li,
+    header a,
+    header button {
+        font-size: 14px;
+    }
+
+    .nav-items li a {
+        padding: 15px 30px;
+    }
+
+    .nav-items li {
+        margin: 0 0%;
+    }
+
+    .gallery-heading {
+        font-size: 18px;
+    }
+
+    .page-headings {
+        font-size: 30px;
+    }
+
+    .page-about-me {
+        min-height: 600px;
+    }
+
+    .page-about-me h1 {
+        padding: 60px 0 40px 0;
+        font-size: 80px;
+    }
+
+    .page-about-me p {
+        font-size: 16px;
+        margin-left: 2.5%;
+        width: 95%;
+        padding: 20px 0;
+    }
+
+    .gallery-row img {
+        width: 32.9%;
+        margin: 0.2%;
+    }
+
+    .page-skills p {
+        font-size: 14px;
+    }
+
+    .skills-left {
+        padding: 30px 10px;
+    }
+
+    .skills-right {
+        padding: 30px 10px;
+    }
+
+    .skills-right ul {
+        margin-left: 10%;
+    }
+
+    .skills-left ul {
+        margin-left: 0;
+    }
+
+    .edited-images-container img {
+        width: 50%;
+    }
+
+    .edited-images-container span {
+        font-size: 30px;
+        padding: 0 5px;
+    }
+
+    .page-work-with-me p {
+        font-size: 14px;
+    }
+
+    .products {
+        border-style: none;
+        padding: 0;
+    }
+
+    .products li {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .products p {
+        font-size: 12px;
+    }
+
+    .poster-prices {
+        display: flex;
+        margin-bottom: 25px;
+    }
+
+    .poster-prices h3 {
+        font-size: 16px;
+    }
+
+    .price-table {
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+
+    .price-table span {
+        font-size: 11px;
+    }
+
+    .table-left-column {
+        width: 220px;
+    }
+
+    .other-prices ul {
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    .other-prices li {
+        text-align: center;
+        font-size: 12px;
+        width: 100%;
+    }
+
+    .vl {
+        border-left: 2px solid #00FFA3;
+        height: 220px;
+        margin-left: 5px;
+        margin-right: 5px;
+        box-shadow: 4px 4px 3px black;
+    }
+
+    .vl-others {
+        visibility: hidden;
+        height: 30px;
+    }
+
+    .discount {
+        font-size: 12px;
+        text-shadow: none;
+    }
+
+    .poster-prices h3 {
+        font-size: 18px;
+        padding-bottom: 20px;
+    }
+
+    .products h4 {
+        font-size: 16px;
+    }
+
+    .contact-details {
+        margin-left: 12% !important;
+    }
+
+    footer p {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    .skills-section {
+        display: block;
+        padding-bottom: 30px;
+    }
+
+    .skills-hr {
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
+
+    .skills-left li,
+    .skills-right li {
+        list-style: none;
+    }
+
+    .skills-left {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .skills-right {
+        width: 100%;
+    }
+
+    .skills-section ul {
+        font-size: 20px;
+    }
+
+    .skills-right ul {
+        margin-left: 10%;
+    }
+
+    .skills-left ul {
+        margin-left: 10%;
+    }
+
+    .skills-left h3, .skills-right h3 {
+        padding-bottom: 20px;
+        font-size: 25px;
+    }
+
+    .table-left-column {
+        width: 140px;
+    }
+
+    .contact-details {
+        margin-left: 7% !important;
+    }
+
+    .wwm-section h1 {
+        font-size: 25px;
+    }
+
+    .wwm-left label {
+        font-size: 16px;
+    }
+}
