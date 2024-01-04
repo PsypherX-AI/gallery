@@ -246,7 +246,7 @@ header ul {
     background-clip: content-box, border-box;
 }
 
-.exclusive {
+.deluxe {
     background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, gold, #DD2476);
 }
 
@@ -272,6 +272,32 @@ header ul {
     width: 80%; 
     height: 5px;
     background-color: #00FFA3;
+}
+
+.posters {
+    text-align: center;
+}
+
+#a4heading, #a3heading, #a2heading {
+    text-decoration: underline;
+}
+
+#a4price, #a3price, #a2price {
+    font-weight: bold;
+    font-size: 24px;
+    padding-top: 5px;
+}
+
+.category-prices {
+    display: flex;
+    padding-top: 30px;
+    justify-content: center;
+}
+
+.category-prices p {
+    padding: 0 50px;
+    font-size: 20px;
+    color: white;
 }
 
 /** ---- IMAGE MODAL ---- **/
@@ -403,6 +429,10 @@ header ul {
     text-align: center;
 }
 
+.imageGeneration span {
+    font-size: smaller;
+}
+
 .edited-images-container {
     display: flex;
     align-items: center;
@@ -470,7 +500,7 @@ header ul {
 .products h3 {
     display: flex;
     justify-content: center;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
     color: #00FFA3;
     text-align: center;
 }
@@ -493,7 +523,7 @@ header ul {
 .products p {
     text-align: center;
     color: white;
-    /* margin-bottom: 40px; */
+    margin-top: 10px;
     font-style: italic;
 }
 
@@ -505,10 +535,17 @@ header ul {
     justify-content: center;
 }
 
-.products table {
-    border: 2px solid #00FFA3;
-    border-radius: 10px;
-    margin-bottom: 20px;
+.product-descriptions {
+    text-align: center;
+}
+
+.product-descriptions p {
+    font-style: normal;
+    font-weight: normal;
+}
+
+.product-descriptions h2 {
+    font-size: 24px;
 }
 
 .vl {
@@ -524,37 +561,6 @@ header ul {
 
 .general-prices ul {
     width: 30%;   
-}
-
-.price-table {
-    width: 80%;
-    margin-left: 10%;
-    font-size: 22px;
-    color: white;
-    margin-bottom: 20px;
-    margin-top: 20px;
-}
-
-.price-table td {
-    /* width: 0%; */
-    height: 40px;
-}
-
-.price-table tr:nth-child(odd){
-    background-color: rgba(175, 175, 175, 0.25);
-}
-
-.price-table span {
-    font-size: 16px;
-}
-
-.price-table h1 {
-    font-size: 20px;
-}
-
-.discount {
-    font-size: 16px;
-    text-shadow: none;
 }
 
 .poster-prices li {
@@ -698,8 +704,12 @@ footer a {
         margin: 10px 0 0 6.5%;
     }
 
-    .exclusive {
+    .deluxe {
         width: 87.5%;
+    }
+
+    .category-prices p {
+        padding: 0 30px;
     }
 
     .skills-left {
@@ -738,6 +748,10 @@ footer a {
 
     .poster-prices {
         margin-left: 0;
+    }
+
+    .product-descriptions h2 {
+        font-size: 22px;
     }
 
     .table-left-column {
@@ -821,6 +835,22 @@ footer a {
 
     .gallery-heading {
         font-size: 18px;
+    }
+
+    .product-descriptions h2 {
+        font-size: 20px;
+    }
+
+    #a4heading, #a3heading, #a2heading {
+        font-size: 18px;
+    }
+    
+    #a4price, #a3price, #a2price {
+        font-size: 20px;
+    }
+
+    .category-prices p {
+        padding: 0 10px;
     }
 
     .page-headings {
@@ -919,7 +949,7 @@ footer a {
 
     .other-prices ul {
         display: block;
-        margin-bottom: 15px;
+        margin-bottom: 35px;
     }
 
     .other-prices li {
