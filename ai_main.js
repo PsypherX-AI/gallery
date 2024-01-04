@@ -1,5 +1,5 @@
 // FOR UPDATING WEBSITE GALLERY CHANGE THE FOLLOWING ARRAYS TO MATCH THE IMAGE NAMES IN EACH FOLDER
-const EXCLUSIVE = [ "GoldRiverGreece", "GoldRiver",  "DJShephard1", "DJShephard2", "SamuraiTree", "Hourglass", "ShipBlue", "Astronaught", "JapanNight", "Apples", "Apples2", "Apples3", "Apples4", "Apples5"]
+const DELUXE = [ "GoldRiverGreece", "GoldRiver",  "DJShephard1", "DJShephard2", "SamuraiTree", "Hourglass", "ShipBlue", "Astronaught", "JapanNight", "Apples", "Apples2", "Apples3", "Apples4", "Apples5"]
 const FANTASY = ["Samurai", "SamuraiPink", "SamuraiGod", "SamuraiOverlookin", "SamuraiEnemy", "GoddessForest", "GoddessLandscape", "HourglassFire", "FutureSetup", "CrystalDragon", "Planets", "Diablo", "FutureCPU", "SquirelArcher", "SquirelArcher2", "TrollWarrior", "Warrior", "DragonSword1", "DragonSword2"];
 const LANDSCAPES = ["RedJapan", "RedJapan2", "JapanSketch", "JapanMoon", "JapanRedMoon", "Bloodriver", "Bloodriver2", "Bloodriver3", "GoldGreyRiver", "Forest", "Coral", "ElegantGirl", "GirlRain", "MountainVillage", "BlossomTree", "JapanCity"];
 const PSYCHEDELIC = ["Hoffman", "DMTForest", "JoburgCBD", "Forest", "WizardCathedral", "Hyperbeast", "Fractal1", "Fractal2", "DragonsSamurai", "DragonSamurai", "DragonSamurai2", "SamuraiSkeleton", "Fractal3", "Fractal4"];
@@ -7,12 +7,16 @@ const REALISTIC = ["Face", "Face2", "VW", "VW2", "Eyes1", "Eyes2", "Eyes3", "Eye
 const ANIMALS = ["Kitten", "KittenKickflip", "Panda", "SadPanda", "DJShephard3", "DJShephard4", "RaveShephard", "DJShephard", "Shephard", "Shephard2"];
 const COSMIC = ["HourglassCosmic", "CosmicMountain", "Cosmic", "CosmicEyes", "CosmicEyes2", "CosmicEye1", "CosmicEye2", "CosmicEye3", "CosmicEye4", "Wizard"];
 
+// PRICES STARTING FROM A2
+const DELUXE_PRICES = ["400", "300", "250"];
+const DEFAULT_PRICES = ["300", "200", "150"];
+
 window.onscroll = function () {
     scrollFunction();
 }
 
 window.onload = function () {
-    setImages('Exclusive', EXCLUSIVE);
+    changeGallery('deluxe', 0);
 }
 
 function scrollFunction () {
@@ -73,10 +77,11 @@ let currentImages = [];
  */
 function changeGallery(folder, butId) {
     updateCategoryButtons(butId);
+    updateCategoryPrices(butId);
 
     switch (folder) {
-        case "exclusive":
-            setImages('Exclusive', EXCLUSIVE); 
+        case "deluxe":
+            setImages('Deluxe', DELUXE); 
             break;
         case "landscape":
             setImages('Landscapes', LANDSCAPES); 
@@ -200,5 +205,31 @@ function updateCategoryButtons (id) {
             button.classList.remove("selected");
             button.classList.add("unselected");
         }
+    }
+}
+
+/**
+ * Updates the text for the poster prices
+ * @param {*} id 
+ */
+function updateCategoryPrices (id) {
+    let PRICES = DELUXE_PRICES;
+    let color = "gold";
+
+    if (id !== 0) {
+        PRICES = DEFAULT_PRICES;
+        color = "#00ffa6";
+    } 
+    
+    for (let i = 2; i < 5; i++) {
+        let item = document.getElementById("a" + i + "price");
+        // let itemHeading = document.getElementById("a" + i + "heading");
+
+        // update the price text
+        item.innerText = "R" + PRICES[i - 2];
+
+        // update the colour of the text
+        item.style.color = color;
+        // itemHeading.style.color = color;
     }
 }
