@@ -64,13 +64,30 @@
 
             <!-- ART GALLERY -->
             <div class="gallery-buttons">
-                <button id="btnCat0" onclick="changeGallery('exclusive', 0)"  class="category-button exclusive selected">Exclusive</button>
+                <button id="btnCat0" onclick="changeGallery('deluxe', 0)"  class="category-button deluxe selected">Deluxe</button>
                 <button id="btnCat1" onclick="changeGallery('fantasy', 1)" class="category-button unselected">Fantasy</button>
                 <button id="btnCat2" onclick="changeGallery('landscape', 2)" class="category-button unselected">Landscapes</button>
                 <button id="btnCat3" onclick="changeGallery('animals', 3)" class="category-button unselected">Animals</button>
                 <button id="btnCat4" onclick="changeGallery('realistic', 4)" class="category-button unselected">Realistic</button>
                 <button id="btnCat5" onclick="changeGallery('cosmic', 5)" class="category-button unselected">Cosmic</button>
                 <button id="btnCat6" onclick="changeGallery('psychedelic', 6)" class="category-button unselected">Psychedelic</button>
+            </div>
+
+            <div class="category-prices">
+                <div class="posters">
+                    <p id="a4heading">A4 Poster</p>
+                    <p id="a4price"></p>
+                </div>
+
+                <div class="posters">
+                    <p id="a3heading">A3 Poster</p>
+                    <p id="a3price"></p>
+                </div>
+
+                <div class="posters">
+                    <p id="a2heading">A2 Poster</p>
+                    <p id="a2price"></p>
+                </div>
             </div>
 
             <hr class="gallery-hr">
@@ -88,7 +105,7 @@
             <h1 class="page-headings">SERVICES</h1>
             <div class="skills-section">
                 <ul>
-                    <li style="padding: 0 0 30px 0;">AI Image Generation</li>
+                    <li class="imageGeneration" style="padding: 0 0 30px 0;">AI Image Generation <span>[R150]</span></li>
                         <p>In our AI Image Generation services, we create high-quality images through sophisticated AI image generation models. Our carefully refined prompts are the 
                             result of extensive testing, enabling us to produce some of the most refined visual content available.</p>
                         <br>
@@ -131,121 +148,26 @@
             <div id="products" class="skills-section">
                 <div class="products">
                     <h3>Products</h3>
-                    <p style="color: gold;">Exclusive Images are an additional R150 (e.g. Exclusive A3 Poster = R350)</p>
-                        <!-- <h4><span>Buy 9 Get 1 Free</span></h4> -->
-                        <table class="price-table">
-                            <!-- Headings -->
-                            <tr>
-                                <td class="table-left-column"></td>
-                                <th>1 Unit</th>
-                                <th>3 Units</th>
-                                <th>5 Units</th>
-                                <!-- <th>10 Units</th> -->
-                            </tr>
-                            <!-- Custom Image -->
-                            <tr>
-                                <th>Custom AI Image</th>
-                                <td>R150</td>
-                                <td>R420</td>
-                                <td>R700</td>
-                                <!-- <td>R750</td> -->
-                            </tr>
-                            <!-- Wallpapers -->
-                            <!-- <tr> -->
-                                <!-- <th>Digital Wallpaper</th>
-                                <td></td>
-                                <td>R250</td>
-                                <td>R400</td> -->
-                                <!-- <td>R750</td> -->
-                            <!-- </tr> -->
-                            <!-- Notepad Covers -->
-                            <!-- <tr> -->
-                                <!-- <th>Notepad Covers</th> -->
-                                <!-- <td></td> -->
-                                <!-- <td>R500</td> -->
-                                <!-- <td>R820</td> -->
-                                <!-- <td>R1,575</td> -->
-                            <!-- </tr> -->
-                            <!-- A4 Poster -->
-                            <tr>
-                                <th>A4 Poster</th>
-                                <td></td>
-                                <td>R435</td>
-                                <td>R700</td>
-                                <!-- <td>R1,350</td> -->
-                            </tr>
-                            <!-- A3 Poster -->
-                            <tr>
-                                <th>A3 Poster</th>
-                                <td>R200</td>
-                                <td>R575</td>
-                                <td>R930</td>
-                                <!-- <td>R1,800</td> -->
-                            </tr>
-                            <!-- A2 Poster -->
-                            <tr>
-                                <th>A2 Poster <span>(150micron gloss laminate)</span></th>
-                                <td>R350</td>
-                                <td>R1,000</td>
-                                <td>R1,600</td>
-                                <!-- <td>R3,150</td> -->
-                            </tr>
-                        </table>
+                        <div class="product-descriptions">
+                            <ul>
+                                <li><div>
+                                    <h2>Posters</h2>
+                                    <p>Printed on quality photopaper & laminated (A2 Posters are laminated in 150micron gloss laminate)</p>
+                                </div></li>
+                                <li><div>
+                                    <h2>Brand Logo</h2>
+                                    <p>Generate the new logo for your brand</p>
+                                </div></li>
+                            </ul>
+                        </div>
 
-                        <p>**Please note that delivery will be calculated and added once the order has been finalized.</p>
-                        
-                        <!-- <li>Posters:</li> -->
-                            <!-- <div class="poster-prices">
-                                <ul>
-                                    <h3>A4 Poster</h3>
-                                    <li><span>1x</span> R150</li>
-                                    <li><span>3x</span> R435</li>
-                                    <li><span>5x</span> R700</li>
-                                    <li><span>10x</span> R1,350 <span class="discount">(-10%)</span></li>
-                                </ul>
-                                <div class="vl"></div>
-                                <ul>
-                                    <h3>A3 Poster</h3>
-                                    <li><span>1x</span> R200</li>
-                                    <li><span>3x</span> R575</li>
-                                    <li><span>5x</span> R930</li>
-                                    <li><span>10x</span> R1,800 <span class="discount">(-10%)</span></li>
-                                </ul>
-                                <div class="vl"></div>
-                                <ul>
-                                    <h3>A2 Poster</h3>
-                                    <li><span>1x</span> R350</li>
-                                    <li><span>3x</span> R1,000</li>
-                                    <li><span>5x</span> R1,600</li>
-                                    <li><span>10x</span> R3,150 <span class="discount">(-10%)</span></li>
-                                </ul>
-                            </div>
-
-                            <div class="general-prices">
-                                <ul>
-                                    <h3>Notepad Covers</h3>
-                                    <li><span>1x</span> R175</li>
-                                    <li><span>3x</span> R500</li>
-                                    <li><span>5x</span> R820</li>
-                                    <li><span>10x</span> R1,575 <span class="discount">(-10%)</span></li>
-                                </ul>
-                                <div class="vl"></div>
-                                <ul>
-                                    <h3>Digital Wallpaper</h3>
-                                    <li><span>3x</span> R250</li>
-                                    <li><span>5x</span> R400</li>
-                                    <li><span>10x</span> R750 <span class="discount">(-10%)</span></li>
-                                </ul>                        
-                            </div> -->
-                            
-                            <h4><span>Other products (On enquiry)</span></h4>
-
+                            <!-- <h4><span>Other products (On enquiry)</span></h4>
                             <div class="other-prices">    
                                 <ul>
                                     <li>Brand Logo Design</li>
-                                    <!-- <div class="vl-others"></div> -->
+                                    <div class="vl-others"></div>
                                 </ul>
-                            </div>
+                            </div> -->
 
                             <h4><span>Coming Soon</span></h4>
                             <div class="other-prices">    
@@ -257,7 +179,8 @@
                                     <li>Mouse Pads</li>
                                 </ul>
                             </div>
-                    
+
+                            <p>**Please note that delivery will be calculated and added once the order has been finalized.</p>
                 </div>
             </div>
         </div>
