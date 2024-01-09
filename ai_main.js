@@ -169,6 +169,11 @@ function enlargeImage(imgAlt) {
     span.onclick = function() { 
         modal.style.display = "none";
     }
+
+    // when the user clicks anywhere on the screen, close the modal
+    modal.onclick = function() {
+        modal.style.display = "none";
+    }
 }
 
 /**
