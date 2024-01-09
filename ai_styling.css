@@ -873,9 +873,16 @@ footer a {
         padding: 20px 0;
     }
 
-    .gallery-row img {
+    /* Splits gallery into 3 images per row */
+    /* .gallery-row img {
         width: 32.9%;
         margin: 0.2%;
+    } */
+
+    /* Splits gallery into 2 images per row */
+    .gallery-row img {
+        width: 49.5%;
+        margin: 0.25%;
     }
 
     .page-skills p {
