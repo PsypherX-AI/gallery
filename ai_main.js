@@ -8,8 +8,8 @@ const ANIMALS = ["Kitten", "KittenKickflip", "Panda", "SadPanda", "DJShephard3",
 const COSMIC = ["HourglassCosmic", "CosmicMountain", "Cosmic", "CosmicEyes", "CosmicEyes2", "CosmicEye1", "CosmicEye2", "CosmicEye3", "CosmicEye4", "Wizard"];
 
 // PRICES STARTING FROM A2
-const DELUXE_PRICES = ["400", "300", "250"];
-const DEFAULT_PRICES = ["300", "200", "150"];
+const DELUXE_PRICES = [];
+const DEFAULT_PRICES = [];
 
 window.onscroll = function () {
     scrollFunction();
@@ -77,7 +77,7 @@ let currentImages = [];
  */
 function changeGallery(folder, butId) {
     updateCategoryButtons(butId);
-    updateCategoryPrices(butId);
+    // updateCategoryPrices(butId);
 
     switch (folder) {
         case "deluxe":
